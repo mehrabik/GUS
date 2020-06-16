@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<trust-agent xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="CAGADroid Trust"
+        android:summary="CAGADroid trust triggers"
+        android:settingsActivity=".CAGADroid_CP_Main" />

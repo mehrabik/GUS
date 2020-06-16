@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.cagadroid.cp"
+    android:sharedUserId="android.uid.system" >
+
+    <permission
+      android:name="com.android.cagadroid.cp.AuthContext"
+      android:label="@string/permlab"
+      android:description="@string/permdesc"
+      android:protectionLevel="dangerous" />
+
+    <uses-permission android:name="android.permission.CONTROL_KEYGUARD" />
+    <uses-permission android:name="android.permission.PROVIDE_TRUST_AGENT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:persistent="true"
+        android:theme="@style/AppTheme"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:name=".CAGADroid_CP_App"
+        android:label="CAGADroid_CP_App" >
+
+        <service
+            android:name=".CAGADroid_Trust_Agent"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_TRUST_AGENT" >
+            <intent-filter>
+                <action android:name="android.service.trust.TrustAgentService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.trust.trustagent"
+                android:resource="@xml/cagadroid_trust_agent" />
+        </service>
+
+        <activity
+            android:name=".CAGADroid_CP_Main"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

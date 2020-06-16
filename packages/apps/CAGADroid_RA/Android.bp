@@ -1,0 +1,34 @@
+asset_dirs = ["assets"]
+
+android_app {
+    name: "CAGADroid_RA",
+    platform_apis: true,
+    privileged: true,
+    certificate: "platform",
+
+    resource_dirs: ["res"],
+
+    srcs: [
+        "src/**/*.java",
+        "gen/**/*.java",
+    ],
+
+    static_libs: [
+        "com.google.android.material_material",
+        "androidx.transition_transition",
+        "androidx.legacy_legacy-support-v13",
+        "androidx.appcompat_appcompat",
+        "androidx.cardview_cardview",
+        "androidx.recyclerview_recyclerview",
+        "androidx.palette_palette",
+        "androidx.legacy_legacy-support-v4",
+        "androidx.fragment_fragment",
+        "android-common",
+    ],
+
+    aaptflags: [
+        "--auto-add-overlay",
+        "--extra-packages",
+        "com.android.phone.common",
+    ],
+}

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CAGADroid CP</string>
+
+    <string name="main_activity_title">CAGADroid CP</string>
+
+    <string name="permlab">Allow IA Scheme to Provide Authenticaiton Context</string>
+
+    <string name="permdesc">Allow the IA Scheme to Provide Authentication Context to CAGADroid CP</string>
+</resources>

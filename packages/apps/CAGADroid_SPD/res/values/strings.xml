@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="main_activity_title">CAGADroid SPD</string>
+
+    <string name="tab_text_s">Settings</string>
+    <string name="tab_text_0">Policies</string>
+    <string name="tab_text_1">Actions</string>
+    <string name="tab_text_2">Operations</string>
+    <string name="tab_text_3">Domains</string>
+    <string name="tab_text_4">Types</string>
+    <string name="tab_text_5">Roles</string>
+    <string name="tab_text_6">Modalities</string>
+    <string name="tab_text_7">Subjects</string>
+    <string name="tab_text_8">Objects</string>
+    <string name="tab_text_9">Users</string>
+    <string name="tab_text_10">Authenticators</string>
+    <string name="tab_text_11">Sub_Dom</string>
+    <string name="tab_text_12">Obj_Typ</string>
+    <string name="tab_text_13">Usr_Rol</string>
+    <string name="tab_text_14">Auth_Mod</string>
+
+    <string name="app_name">CAGADroid SPD</string>
+
+    <string-array name="mode_spinner_array">
+        <item>Targeted</item>
+        <item>Deny-All</item>
+    </string-array>
+
+    <string-array name="reauth_freq_spinner_array">
+        <item>Instantaneous</item>
+        <item>1 Seconds</item>
+        <item>10 Seconds</item>
+        <item>30 Seconds</item>
+    </string-array>
+</resources>

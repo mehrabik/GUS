@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CAGADroid>
+    <!-- Defining Actions -->
+    <Actions>
+        <Action ID="0" Name="deny"/>
+        <Action ID="1" Name="allow"/>
+        <Action ID="2" Name="auth"/>
+    </Actions>
+
+    <!-- Defining Operations -->
+    <Operations>
+        <Operation ID="1" Name="request_permission"/>
+        <Operation ID="2" Name="start_activity"/>
+    </Operations>
+
+    <!-- Defining Subjects (apps) -->
+    <Subjects>
+        <!-- Marketplace apps -->
+	      <Subject ID="1001" Name="com.apkpure.aegon"/>
+        <Subject ID="1002" Name="com.google.android.packageinstaller"/>
+        <Subject ID="1003" Name="com.android.vending"/>
+        <Subject ID="1004" Name="cm.aptoide.pt"/>
+        <Subject ID="1005" Name="com.farsitel.bazaar"/>
+        <Subject ID="1006" Name="org.fdroid.fdroid"/>
+        <Subject ID="1007" Name="com.android.vending"/>
+
+        <!-- Browsers -->
+        <Subject ID="1008" Name="com.android.chrome"/>
+        <Subject ID="1009" Name="com.brave.browser"/>
+        <Subject ID="1010" Name="com.duckduckgo.mobile.android"/>
+        <Subject ID="1011" Name="com.opera.browser"/>
+        <Subject ID="1012" Name="org.mozilla.firefox"/>
+
+        <!-- Camera apps -->
+        <Subject ID="1013" Name="com.android.camera2"/>
+        <Subject ID="1014" Name="com.google.android.GoogleCamera"/>
+        <Subject ID="1015" Name="net.sourceforge.opencamera"/>
+        <Subject ID="1016" Name="panorama.filter.selfie.hd.camera"/>
+        <Subject ID="1017" Name="photo.android.hd.camera"/>
+
+        <!-- Directions apps -->
+        <Subject ID="1018" Name="com.citymapper.app.release"/>
+        <Subject ID="1019" Name="com.google.android.apps.maps"/>
+        <Subject ID="1020" Name="com.nyctrans.it"/>
+        <Subject ID="1021" Name="com.thetransitapp.droid"/>
+        <Subject ID="1022" Name="com.waze"/>
+
+        <!-- Email apps -->
+        <Subject ID="1023" Name="com.google.android.gm"/>
+        <Subject ID="1024" Name="com.microsoft.office.outlook"/>
+        <Subject ID="1025" Name="com.readdle.spark"/>
+        <Subject ID="1026" Name="com.android.email"/>
+        <Subject ID="1027" Name="com.yahoo.mobile.client.android.mail"/>
+
+        <!-- Entertainment apps -->
+        <Subject ID="1028" Name="com.colorswitch.switch2"/>
+        <Subject ID="1029" Name="com.halfbrick.fruitninjafree"/>
+        <Subject ID="1030" Name="com.imangi.templerun"/>
+        <Subject ID="1031" Name="com.kiloo.subwaysurf"/>
+        <Subject ID="1032" Name="com.sega.sonicdash"/>
+
+        <!-- Files apps -->
+        <Subject ID="1033" Name="com.google.android.apps.docs"/>
+        <Subject ID="1034" Name="com.android.documentsui"/>
+        <Subject ID="1035" Name="com.mi.android.globalFileexplorer"/>
+        <Subject ID="1036" Name="com.android.gallery3d"/>
+        <Subject ID="1037" Name="com.google.android.apps.photos"/>
+
+        <!-- Financial apps -->
+        <Subject ID="1038" Name="ca.tangerine.clients.banking.app"/>
+        <Subject ID="1039" Name="com.chase.sig.android"/>
+        <Subject ID="1040" Name="com.rbc.mobile.android"/>
+        <Subject ID="1041" Name="com.scotiabank.banking"/>
+        <Subject ID="1042" Name="com.td"/>
+
+        <!-- Messaging apps -->
+        <Subject ID="1043" Name="com.discord"/>
+        <Subject ID="1044" Name="com.facebook.orca"/>
+        <Subject ID="1045" Name="com.android.messaging"/>
+        <Subject ID="1046" Name="com.whatsapp"/>
+        <Subject ID="1047" Name="org.telegram.messenger"/>
+
+        <!-- Phone apps -->
+        <Subject ID="1048" Name="com.android.dialer"/>
+        <Subject ID="1049" Name="com.google.android.dialer"/>
+        <Subject ID="1050" Name="com.google.android.talk"/>
+        <Subject ID="1051" Name="com.contapps.android"/>
+        <Subject ID="1052" Name="com.ky.next.dialer"/>
+
+        <!-- Shopping apps -->
+        <Subject ID="1053" Name="com.alibaba.aliexpresshd"/>
+        <Subject ID="1054" Name="com.amazon.mShop.android.shopping"/>
+        <Subject ID="1055" Name="com.contextlogic.wish"/>
+        <Subject ID="1056" Name="ca.walmart.ecommerceapp"/>
+        <Subject ID="1057" Name="com.ebay.mobile"/>
+
+        <!-- Social Networking apps -->
+        <Subject ID="1058" Name="com.facebook.katana"/>
+        <Subject ID="1059" Name="com.instagram.android"/>
+        <Subject ID="1060" Name="com.snapchat.android"/>
+        <Subject ID="1061" Name="com.twitter.android"/>
+        <Subject ID="1062" Name="com.zhiliaoapp.musically"/>
+
+        <!-- Utility apps -->
+        <Subject ID="1063" Name="com.android.deskclock"/>
+        <Subject ID="1064" Name="com.google.android.deskclock"/>
+        <Subject ID="1065" Name="com.google.android.calendar"/>
+        <Subject ID="1066" Name="com.accuweather.android"/>
+        <Subject ID="1067" Name="com.weather.Weather"/>
+
+        <!-- Video apps -->
+        <Subject ID="1068" Name="ca.bellmedia.cravetv"/>
+        <Subject ID="1069" Name="com.google.android.youtube"/>
+        <Subject ID="1070" Name="com.vimeo.android.videoapp"/>
+        <Subject ID="1071" Name="org.videolan.vlc"/>
+        <Subject ID="1072" Name="uplayer.video.player"/>
+
+        <!-- Work apps -->
+        <Subject ID="1073" Name="com.google.android.apps.docs.editors.docs"/>
+        <Subject ID="1074" Name="com.google.android.apps.meetings"/>
+        <Subject ID="1075" Name="com.microsoft.office.word"/>
+        <Subject ID="1076" Name="com.Slack"/>
+        <Subject ID="1077" Name="us.zoom.videomeetings"/>
+    </Subjects>
+
+    <!-- Defining Domains -->
+    <Domains>
+        <Domain ID="0" Name="any"/>
+        <Domain ID="1" Name="normal_apps"/>
+        <Domain ID="2" Name="sensitive_apps"/>
+        <Domain ID="3" Name="dangerous_apps" />
+    </Domains>
+
+    <!-- Subject Domain memberships -->
+    <Subject_Domains>
+        <Subject_Domain sID="1001" dID="1"/>
+        <Subject_Domain sID="1002" dID="2"/>
+        <Subject_Domain sID="1003" dID="1"/>
+        <Subject_Domain sID="1004" dID="1"/>
+        <Subject_Domain sID="1005" dID="1"/>
+        <Subject_Domain sID="1006" dID="1"/>
+        <Subject_Domain sID="1007" dID="3"/>
+
+        <Subject_Domain sID="1008" dID="2"/>
+        <Subject_Domain sID="1009" dID="2"/>
+        <Subject_Domain sID="1010" dID="2"/>
+        <Subject_Domain sID="1011" dID="2"/>
+        <Subject_Domain sID="1012" dID="2"/>
+
+        <Subject_Domain sID="1013" dID="2"/>
+        <Subject_Domain sID="1014" dID="2"/>
+        <Subject_Domain sID="1015" dID="1"/>
+        <Subject_Domain sID="1016" dID="1"/>
+        <Subject_Domain sID="1017" dID="1"/>
+
+        <Subject_Domain sID="1018" dID="1"/>
+        <Subject_Domain sID="1019" dID="3"/>
+        <Subject_Domain sID="1020" dID="1"/>
+        <Subject_Domain sID="1021" dID="1"/>
+        <Subject_Domain sID="1022" dID="1"/>
+
+        <Subject_Domain sID="1023" dID="2"/>
+        <Subject_Domain sID="1024" dID="2"/>
+        <Subject_Domain sID="1025" dID="2"/>
+        <Subject_Domain sID="1026" dID="2"/>
+        <Subject_Domain sID="1027" dID="2"/>
+
+        <Subject_Domain sID="1028" dID="1"/>
+        <Subject_Domain sID="1029" dID="1"/>
+        <Subject_Domain sID="1030" dID="1"/>
+        <Subject_Domain sID="1031" dID="1"/>
+        <Subject_Domain sID="1032" dID="1"/>
+
+        <Subject_Domain sID="1033" dID="2"/>
+        <Subject_Domain sID="1034" dID="3"/>
+        <Subject_Domain sID="1035" dID="3"/>
+        <Subject_Domain sID="1036" dID="3"/>
+        <Subject_Domain sID="1037" dID="3"/>
+
+        <Subject_Domain sID="1038" dID="2"/>
+        <Subject_Domain sID="1039" dID="3"/>
+        <Subject_Domain sID="1040" dID="3"/>
+        <Subject_Domain sID="1041" dID="3"/>
+        <Subject_Domain sID="1042" dID="3"/>
+
+        <Subject_Domain sID="1043" dID="3"/>
+        <Subject_Domain sID="1044" dID="3"/>
+        <Subject_Domain sID="1045" dID="2"/>
+        <Subject_Domain sID="1046" dID="2"/>
+        <Subject_Domain sID="1047" dID="3"/>
+
+        <Subject_Domain sID="1048" dID="2"/>
+        <Subject_Domain sID="1049" dID="2"/>
+        <Subject_Domain sID="1050" dID="2"/>
+        <Subject_Domain sID="1051" dID="3"/>
+        <Subject_Domain sID="1052" dID="2"/>
+
+        <Subject_Domain sID="1053" dID="1"/>
+        <Subject_Domain sID="1054" dID="1"/>
+        <Subject_Domain sID="1055" dID="1"/>
+        <Subject_Domain sID="1056" dID="1"/>
+        <Subject_Domain sID="1057" dID="1"/>
+
+        <Subject_Domain sID="1058" dID="2"/>
+        <Subject_Domain sID="1059" dID="2"/>
+        <Subject_Domain sID="1060" dID="3"/>
+        <Subject_Domain sID="1061" dID="2"/>
+        <Subject_Domain sID="1062" dID="2"/>
+
+        <Subject_Domain sID="1063" dID="1"/>
+        <Subject_Domain sID="1064" dID="1"/>
+        <Subject_Domain sID="1065" dID="3"/>
+        <Subject_Domain sID="1066" dID="1"/>
+        <Subject_Domain sID="1067" dID="1"/>
+
+        <Subject_Domain sID="1068" dID="2"/>
+        <Subject_Domain sID="1069" dID="2"/>
+        <Subject_Domain sID="1070" dID="2"/>
+        <Subject_Domain sID="1071" dID="3"/>
+        <Subject_Domain sID="1072" dID="3"/>
+
+        <Subject_Domain sID="1073" dID="2"/>
+        <Subject_Domain sID="1074" dID="2"/>
+        <Subject_Domain sID="1075" dID="3"/>
+        <Subject_Domain sID="1076" dID="3"/>
+        <Subject_Domain sID="1077" dID="3"/>
+    </Subject_Domains>
+
+    <!-- Defining Objects -->
+    <Objects>
+        <Object ID="101" Name="com.android.packageinstaller.UninstallerActivity"/>
+        <Object ID="102" Name="com.google.android.finsky.billing.acquire.BottomSheetUiBuilderHostActivity"/>
+        <Object ID="103" Name="com.farsitel.bazaar.giant.ui.payment.PaymentActivity"/>
+
+        <Object ID="104" Name="com.android.camera.CameraLauncher"/>
+        <Object ID="105" Name="com.android.gallery3d.app.GalleryActivity"/>
+        <Object ID="106" Name="com.google.android.apps.photos.pager.HostPhotoPagerActivity"/>
+        <Object ID="107" Name="com.android.camera.activity.GalleryActivity"/>
+
+        <Object ID="108" Name="com.citymapper.app.citychooser.SwitchCityActivity"/>
+        <Object ID="109" Name="com.citymapper.app.user.identity.IdentityActivity"/>
+        <Object ID="110" Name="com.waze.settings.SettingsPageActivity"/>
+
+        <Object ID="111" Name="com.google.android.gm.ComposeActivityGmail"/>
+        <Object ID="112" Name="com.microsoft.office.outlook.compose.ComposeActivityWithFragment"/>
+
+        <Object ID="113" Name="com.readdle.spark.ui.composer.ComposerActivity"/>
+        <Object ID="114" Name="com.android.email.activity.ComposeActivityEmail"/>
+        <Object ID="115" Name="com.yahoo.mail.ui.activities.ComposeActivity"/>
+
+        <Object ID="116" Name="com.android.billingclient.api.ProxyBillingActivity"/>
+
+        <Object ID="117" Name="com.google.android.apps.docs.doclist.documentopener.DocumentOpenerActivity"/>
+
+        <Object ID="118" Name="com.android.messaging.ui.conversation.ConversationActivity"/>
+        <Object ID="119" Name="com.whatsapp.Conversation"/>
+
+        <Object ID="120" Name="com.android.incallui.InCallActivity"/>
+        <Object ID="121" Name="com.google.android.apps.hangouts.hangout.HangoutActivity"/>
+
+        <Object ID="122" Name="com.aliexpress.module.wish.QuickWishListGroupListActivity"/>
+        <Object ID="123" Name="com.aliexpress.module.placeorder.ConfirmOrderActivity"/>
+        <Object ID="124" Name="com.amazon.mShop.opl.web.WebPurchaseActivity"/>
+        <Object ID="125" Name="com.contextlogic.wish.activity.cart.CartActivity"/>
+        <Object ID="126" Name="com.razorfish.walmart.ui.screens.cart.CartActivity"/>
+        <Object ID="127" Name="com.ebay.mobile.viewitem.ViewItemChooseVariationsActivity"/>
+        <Object ID="128" Name="com.ebay.mobile.shoppingcart.ShoppingCartActivity"/>
+
+        <Object ID="129" Name="com.facebook.composer.activity.ComposerActivity"/>
+        <Object ID="130" Name="com.instagram.creation.activity.MediaCaptureActivity"/>
+        <Object ID="131" Name="com.twitter.composer.ComposerActivity"/>
+        <Object ID="132" Name="com.ss.android.ugc.aweme.shortvideo.ui.VideoRecordNewActivity"/>
+
+        <Object ID="133" Name="com.android.deskclock.settings.SettingsActivity"/>
+
+        <Object ID="134" Name="com.accuweather.settings.SettingsMainActivity"/>
+        <Object ID="135" Name="com.weather.Weather.settings.SettingsActivity"/>
+
+        <Object ID="136" Name="com.google.android.libraries.youtube.edit.gallery.GalleryActivity"/>
+        <Object ID="137" Name="com.vimeo.live.ui.screens.main.VimeoLiveActivity"/>
+
+        <Object ID="138" Name="com.google.android.apps.docs.editors.kix.KixEditorActivity"/>
+
+        <Object ID="139" Name="com.google.android.apps.meetings.conference.ConferenceActivity"/>
+    </Objects>
+
+    <!-- Defining Types -->
+    <Types>
+        <Type ID="0" Name="any"/>
+        <Type ID="201" Name="normal_activities"/>
+	      <Type ID="202" Name="sensitive_activities"/>
+        <Type ID="203" Name="dangerous_activities"/>
+    </Types>
+
+    <!-- Object Type memberships -->
+    <Object_Types>
+        <Object_Type oID="101" tID="203"/>
+        <Object_Type oID="102" tID="203"/>
+        <Object_Type oID="103" tID="203"/>
+
+        <Object_Type oID="104" tID="203"/>
+        <Object_Type oID="105" tID="203"/>
+        <Object_Type oID="106" tID="203"/>
+        <Object_Type oID="107" tID="203"/>
+
+        <Object_Type oID="108" tID="203"/>
+        <Object_Type oID="109" tID="203"/>
+        <Object_Type oID="110" tID="203"/>
+
+        <Object_Type oID="111" tID="203"/>
+        <Object_Type oID="112" tID="203"/>
+
+        <Object_Type oID="113" tID="203"/>
+        <Object_Type oID="114" tID="203"/>
+        <Object_Type oID="115" tID="203"/>
+
+        <Object_Type oID="116" tID="203"/>
+
+        <Object_Type oID="117" tID="203"/>
+
+        <Object_Type oID="118" tID="203"/>
+        <Object_Type oID="119" tID="203"/>
+
+        <Object_Type oID="120" tID="203"/>
+        <Object_Type oID="121" tID="203"/>
+
+        <Object_Type oID="122" tID="202"/>
+        <Object_Type oID="123" tID="203"/>
+        <Object_Type oID="124" tID="203"/>
+        <Object_Type oID="125" tID="203"/>
+        <Object_Type oID="126" tID="203"/>
+        <Object_Type oID="127" tID="202"/>
+        <Object_Type oID="128" tID="203"/>
+
+        <Object_Type oID="129" tID="203"/>
+        <Object_Type oID="130" tID="203"/>
+        <Object_Type oID="131" tID="203"/>
+        <Object_Type oID="132" tID="203"/>
+
+        <Object_Type oID="133" tID="203"/>
+
+        <Object_Type oID="134" tID="203"/>
+        <Object_Type oID="135" tID="203"/>
+
+        <Object_Type oID="136" tID="203"/>
+        <Object_Type oID="137" tID="203"/>
+
+        <Object_Type oID="138" tID="203"/>
+        <Object_Type oID="139" tID="203"/>
+    </Object_Types>
+
+    <!-- Defining Users (Physical Users) -->
+    <Users>
+        <User ID="1" Name="Guest"/>
+        <User ID="2" Name="Secondary"/>
+        <User ID="3" Name="Primary"/>
+    </Users>
+
+    <!-- Defining Roles -->
+    <Roles>
+        <Role ID="0" Name="any"/>
+        <Role ID="1" Name="guests"/>
+        <Role ID="2" Name="secondary_users"/>
+        <Role ID="3" Name="primary_users"/>
+    </Roles>
+
+    <!-- User Role memberships -->
+    <User_Roles>
+        <User_Role uID="1" RoleID="1"/>
+        <User_Role uID="2" RoleID="2"/>
+        <User_Role uID="3" RoleID="3"/>
+    </User_Roles>
+
+    <!-- Defining Authenticators (unlocking methods) -->
+    <Authenticators>
+        <Authenticator ID="101" Name="DummyIA"/>
+    </Authenticators>
+
+    <!-- Defining Modalities -->
+    <Modalities>
+        <Modality ID="0" Name="any"/>
+        <Modality ID="100" Name="IA"/>
+    </Modalities>
+
+    <!-- Authenticator Modalitiy memberships -->
+    <Authenticator_Modalities>
+        <Authenticator_Modality rID="101" mID="100"/>
+    </Authenticator_Modalities>
+
+    <!-- Defining Policies -->
+    <Policies>
+          <!-- Deny sensitve apps from starting dangerous activities when the user is secondary (no matter the authentication confidence) -->
+          <Policy ActionID="0" DomainID="2" TypeID="203" OperationID="2" RoleID="2" ModalityID="0" Conf="0"/>
+
+          <!-- Deny sensitve apps from starting dangerous activities when the user is primary but authenticated with less than 99% confidence -->
+          <Policy ActionID="0" DomainID="2" TypeID="203" OperationID="2" RoleID="3" ModalityID="0" Conf="-99"/>
+
+          <!-- Deny normal apps from starting dangerous activities when the user is secondary (no matter the confidence) -->
+          <Policy ActionID="0" DomainID="1" TypeID="203" OperationID="2" RoleID="2" ModalityID="0" Conf="0"/>
+
+          <!-- Deny normal apps from starting dangerous activities when the user is primary but authenticated with less than 99% confidence -->
+          <Policy ActionID="0" DomainID="1" TypeID="203" OperationID="2" RoleID="3" ModalityID="0" Conf="-99"/>
+
+          <!-- Deny normal apps from starting sensitive or dangerous activities when the user is guest (confidence is irrelevant here) -->
+          <Policy ActionID="0" DomainID="1" TypeID="202" OperationID="2" RoleID="1" ModalityID="0" Conf="0"/>
+          <Policy ActionID="0" DomainID="1" TypeID="203" OperationID="2" RoleID="1" ModalityID="0" Conf="0"/>
+
+          <!-- Deny access to dangerous apps for guest and secondary users (no matter the confidence) -->
+          <Policy ActionID="0" DomainID="3" TypeID="0" OperationID="2" RoleID="2" ModalityID="0" Conf="0"/>
+          <Policy ActionID="0" DomainID="3" TypeID="0" OperationID="2" RoleID="1" ModalityID="0" Conf="0"/>
+
+          <!-- Deny access to dangerous apps for primary user when confidence is below 99% -->
+          <Policy ActionID="0" DomainID="3" TypeID="0" OperationID="2" RoleID="3" ModalityID="0" Conf="-99"/>
+
+          <!-- Deny access to sensitive apps for primary user when confidence is below 50% -->
+          <Policy ActionID="0" DomainID="2" TypeID="0" OperationID="2" RoleID="3" ModalityID="0" Conf="-50"/>
+
+          <!-- Deny access to sensitive apps for secondary user when confidence is below 99% -->
+          <Policy ActionID="0" DomainID="2" TypeID="0" OperationID="2" RoleID="2" ModalityID="0" Conf="-99"/>
+
+          <!-- Deny access to sensitive apps for guest (no matter the confidence) -->
+          <Policy ActionID="0" DomainID="2" TypeID="0" OperationID="2" RoleID="1" ModalityID="0" Conf="0"/>
+    </Policies>
+</CAGADroid>

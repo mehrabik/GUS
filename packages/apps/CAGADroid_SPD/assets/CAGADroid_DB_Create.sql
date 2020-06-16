@@ -1,0 +1,90 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "operations" (
+	"OPID"	INTEGER NOT NULL,
+	"Name"	TEXT NOT NULL,
+	PRIMARY KEY("OPID")
+);
+CREATE TABLE IF NOT EXISTS "subjects" (
+	"SID"	INTEGER NOT NULL,
+	"Name"	TEXT NOT NULL,
+	PRIMARY KEY("SID")
+);
+CREATE TABLE IF NOT EXISTS "users" (
+	"UID"	INTEGER NOT NULL,
+	"Name"	TEXT NOT NULL,
+	"Primay"	INTEGER NOT NULL,
+	PRIMARY KEY("UID")
+);
+CREATE TABLE IF NOT EXISTS "domains" (
+	"DID"	INTEGER NOT NULL,
+	"Name"	TEXT NOT NULL,
+	PRIMARY KEY("DID")
+);
+CREATE TABLE IF NOT EXISTS "auth_method" (
+	"MID"	INTEGER NOT NULL,
+	"Name"	TEXT NOT NULL,
+	"Single_User"	INTEGER NOT NULL,
+	PRIMARY KEY("MID")
+);
+CREATE TABLE IF NOT EXISTS "authenticators" (
+	"RID"	INTEGER NOT NULL,
+	"Name"	TEXT NOT NULL,
+	"MID"	INTEGER NOT NULL,
+	PRIMARY KEY("RID")
+);
+CREATE TABLE IF NOT EXISTS "policies" (
+	"AID"	INTEGER NOT NULL,
+	"SID"	INTEGER NOT NULL,
+	"OID"	INTEGER NOT NULL,
+	"OPID"	INTEGER NOT NULL,
+	"UID"	INTEGER NOT NULL,
+	"RID"	INTEGER NOT NULL,
+	"Conf"	REAL NOT NULL,
+	PRIMARY KEY("SID","OID","OPID","UID","RID")
+);
+CREATE TABLE IF NOT EXISTS "actions" (
+	"AID"	INTEGER NOT NULL,
+	"Name"	TEXT,
+	PRIMARY KEY("AID")
+);
+CREATE TABLE IF NOT EXISTS "objects" (
+	"OID"	INTEGER NOT NULL,
+	"Name"	TEXT,
+	PRIMARY KEY("OID")
+);
+CREATE TABLE IF NOT EXISTS "object_type" (
+	"OID"	INTEGER NOT NULL,
+	"TID"	INTEGER NOT NULL,
+	PRIMARY KEY("OID","TID")
+);
+CREATE TABLE IF NOT EXISTS "subject_domain" (
+	"SID"	INTEGER NOT NULL,
+	"DID"	INTEGER NOT NULL,
+	PRIMARY KEY("SID","DID")
+);
+CREATE TABLE IF NOT EXISTS "types" (
+	"TID"	INTEGER NOT NULL,
+	"Name"	TEXT,
+	PRIMARY KEY("TID")
+);
+INSERT INTO "operations" VALUES (1,'Read');
+INSERT INTO "operations" VALUES (2,'Write');
+INSERT INTO "users" VALUES (1,'any',0);
+INSERT INTO "users" VALUES (2,'owner',1);
+INSERT INTO "domains" VALUES (1,'Ordinary');
+INSERT INTO "domains" VALUES (2,'Sensitive');
+INSERT INTO "auth_method" VALUES (1,'Explicit_Auth',1);
+INSERT INTO "auth_method" VALUES (2,'Explicit_Ident',0);
+INSERT INTO "auth_method" VALUES (3,'Implicit_Auth
+',1);
+INSERT INTO "auth_method" VALUES (4,'Implicit_Ident',0);
+INSERT INTO "authenticators" VALUES (1,'PIN',1);
+INSERT INTO "authenticators" VALUES (2,'Fingerprint',1);
+INSERT INTO "authenticators" VALUES (3,'Pattern',1);
+INSERT INTO "authenticators" VALUES (4,'Face',1);
+INSERT INTO "actions" VALUES (1,'Allow');
+INSERT INTO "actions" VALUES (2,'Deny');
+INSERT INTO "actions" VALUES (3,'Auth');
+INSERT INTO "types" VALUES (1,'normal');
+INSERT INTO "types" VALUES (2,'dangerous');
+COMMIT;

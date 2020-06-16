@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="main_activity_title">CAGADroid Security Manager</string>
+
+    <string name="tab_text_s">Settings</string>
+
+    <string name="app_name">CAGADroid SM</string>
+
+    <string-array name="mode_spinner_array">
+        <item>Targeted</item>
+        <item>Deny-All</item>
+    </string-array>
+
+    <string-array name="reauth_freq_spinner_array">
+        <item>Instantaneous</item>
+        <item>1 Seconds</item>
+        <item>10 Seconds</item>
+        <item>30 Seconds</item>
+    </string-array>
+</resources>
